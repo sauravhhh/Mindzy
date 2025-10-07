@@ -1,1 +1,101 @@
-a
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindzy - Personality Type Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Mindzy</h1>
+    </div>
+
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div class="welcome-screen active">
+            <div class="card">
+                <div class="welcome-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h2 class="welcome-title">Discover Your Myers-Briggs Type</h2>
+                <p class="welcome-text">
+                    Take this quick quiz to discover your Myers-Briggs personality type (like INTJ, INFP, etc.) and get detailed insights about your dating style, strengths, and compatibility on Tinder.
+                </p>
+                <button class="btn" id="startQuiz">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="quiz-screen">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            
+            <div class="question-card card" id="questionCard">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+            
+            <div class="navigation">
+                <button class="nav-btn" id="prevBtn" disabled>Previous</button>
+                <button class="nav-btn" id="nextBtn" disabled>Next</button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="result-screen">
+            <div class="personality-card card">
+                <div class="personality-icon" id="personalityIcon">
+                    <!-- Icon will be set based on personality type -->
+                </div>
+                <div class="personality-type" id="personalityType">INTJ</div>
+                <h2 class="personality-title" id="personalityTitle">The Architect</h2>
+                <p class="personality-description" id="personalityDescription">
+                    <!-- Description will be set here -->
+                </p>
+            </div>
+            
+            <div class="detail-card">
+                <h3 class="detail-title"><i class="fas fa-user"></i> Personality Traits</h3>
+                <div class="traits-list" id="traitsList">
+                    <!-- Traits will be dynamically inserted here -->
+                </div>
+            </div>
+            
+            <div class="detail-card">
+                <h3 class="detail-title"><i class="fas fa-heart"></i> Dating Style</h3>
+                <div class="detail-content" id="datingStyle">
+                    <!-- Dating style will be set here -->
+                </div>
+            </div>
+            
+            <div class="detail-card">
+                <h3 class="detail-title"><i class="fas fa-lightbulb"></i> Tinder Tips</h3>
+                <div class="detail-content" id="tinderTips">
+                    <!-- Tinder tips will be set here -->
+                </div>
+            </div>
+            
+            <div class="compatibility-card">
+                <h3 class="detail-title"><i class="fas fa-heart-pulse"></i> Most Compatible Types</h3>
+                <div class="compatibility-types" id="compatibilityTypes">
+                    <!-- Compatibility types will be dynamically inserted here -->
+                </div>
+            </div>
+            
+            <button class="share-btn" id="shareBtn">
+                <i class="fas fa-share-alt"></i> Share Your Personality Type
+            </button>
+            
+            <button class="btn" id="restartBtn" style="margin-top: 15px;">Take Quiz Again</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        Made with <i class="fas fa-heart"></i> by Sauravhhh
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
