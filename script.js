@@ -71,6 +71,78 @@ const personalityTypes = {
         datingStyle: "ENFPs approach dating with enthusiasm and optimism. They value emotional connection and shared experiences. They're looking for partners who can match their energy and share their zest for life.",
         tinderTips: "Express your enthusiasm and creativity in your bio. Use colorful, energetic photos. Be engaging and playful in conversations. Look for profiles that suggest creativity and a positive outlook. Don't be afraid to share your dreams and passions.",
         compatibility: ["INFJ", "INTJ", "ENFJ", "ENTJ"]
+    },
+    ISTJ: {
+        icon: "fas fa-balance-scale",
+        title: "The Logistician",
+        description: "ISTJs are practical, fact-minded individuals who value responsibility and tradition. They're reliable, organized, and detail-oriented with a strong sense of duty.",
+        traits: ["Practical", "Reliable", "Organized", "Detail-oriented", "Responsible", "Traditional"],
+        datingStyle: "ISTJs approach dating with seriousness and commitment. They value stability and shared values. They're looking for reliable, long-term relationships with partners who share their practical approach to life.",
+        tinderTips: "Express your reliability and values in your bio. Use classic, well-presented photos. Be straightforward and honest in conversations. Look for profiles that suggest stability and responsibility. Don't be afraid to share your goals and plans.",
+        compatibility: ["ESFP", "ESTP", "ISFJ", "ISTP"]
+    },
+    ISFJ: {
+        icon: "fas fa-shield-alt",
+        title: "The Protector",
+        description: "ISFJs are warm, practical, and caring individuals who are dedicated to helping others. They're reliable, observant, and have a strong sense of responsibility.",
+        traits: ["Warm", "Practical", "Caring", "Reliable", "Observant", "Traditional"],
+        datingStyle: "ISFJs approach dating with warmth and dedication. They value emotional connection and shared values. They're looking for stable, committed relationships where they can care for their partners.",
+        tinderTips: "Express your caring nature in your bio. Use warm, approachable photos. Be attentive and supportive in conversations. Look for profiles that suggest kindness and reliability. Don't be afraid to show your nurturing side.",
+        compatibility: ["ESFP", "ESTP", "ENFJ", "ENTJ"]
+    },
+    ESTJ: {
+        icon: "fas fa-landmark",
+        title: "The Executive",
+        description: "ESTJs are organized, practical, and decisive individuals who value tradition and order. They're natural leaders who excel at bringing people together and getting things done.",
+        traits: ["Organized", "Practical", "Decisive", "Responsible", "Traditional", "Efficient"],
+        datingStyle: "ESTJs approach dating with directness and commitment. They value stability and shared values. They're looking for reliable, long-term relationships with partners who share their practical approach to life.",
+        tinderTips: "Express your reliability and leadership in your bio. Use confident, professional photos. Be direct and honest in conversations. Look for profiles that suggest stability and responsibility. Don't be afraid to take charge in planning dates.",
+        compatibility: ["INFP", "INTP", "ISFP", "ISTP"]
+    },
+    ESFJ: {
+        icon: "fas fa-hands",
+        title: "The Consul",
+        description: "ESFJs are warm, caring, and sociable individuals who are dedicated to helping others. They're organized, practical, and have a strong sense of responsibility.",
+        traits: ["Warm", "Caring", "Sociable", "Organized", "Practical", "Responsible"],
+        datingStyle: "ESFJs approach dating with warmth and enthusiasm. They value emotional connection and shared values. They're looking for stable, committed relationships where they can care for their partners.",
+        tinderTips: "Express your warmth and sociability in your bio. Use friendly, approachable photos. Be engaging and supportive in conversations. Look for profiles that suggest kindness and reliability. Don't be afraid to show your caring nature.",
+        compatibility: ["INFP", "ISFP", "ENFP", "ENTP"]
+    },
+    ISTP: {
+        icon: "fas fa-tools",
+        title: "The Virtuoso",
+        description: "ISTPs are bold, practical, and experimental individuals who love exploring and mastering the physical world. They're logical, adaptable, and have a knack for understanding how things work.",
+        traits: ["Bold", "Practical", "Experimental", "Logical", "Adaptable", "Independent"],
+        datingStyle: "ISTPs approach dating with a relaxed, practical attitude. They value independence and shared experiences. They're looking for partners who can match their adventurous spirit and respect their need for space.",
+        tinderTips: "Express your practical skills and interests in your bio. Use active, adventurous photos. Be straightforward and relaxed in conversations. Look for profiles that suggest adventure and independence. Don't be afraid to suggest exciting dates.",
+        compatibility: ["ESFJ", "ESTJ", "ENFJ", "ENTJ"]
+    },
+    ISFP: {
+        icon: "fas fa-palette",
+        title: "The Adventurer",
+        description: "ISFPs are flexible, charming, and artistic individuals who love exploring new possibilities. They're sensitive, observant, and have a deep appreciation for beauty and aesthetics.",
+        traits: ["Flexible", "Charming", "Artistic", "Sensitive", "Observant", "Adventurous"],
+        datingStyle: "ISFPs approach dating with openness and authenticity. They value emotional connection and shared experiences. They're looking for relationships where they can express their creativity and be their true selves.",
+        tinderTips: "Express your artistic side in your bio. Use creative, aesthetic photos. Be genuine and open in conversations. Look for profiles that suggest creativity and sensitivity. Don't be afraid to share your passions and interests.",
+        compatibility: ["ESFJ", "ESTJ", "ENFJ", "ENTJ"]
+    },
+    ESTP: {
+        icon: "fas fa-rocket",
+        title: "The Entrepreneur",
+        description: "ESTPs are energetic, action-oriented individuals who love living in the moment. They're perceptive, practical, and have a knack for adapting to new situations.",
+        traits: ["Energetic", "Action-oriented", "Perceptive", "Practical", "Adaptable", "Spontaneous"],
+        datingStyle: "ESTPs approach dating with energy and spontaneity. They value excitement and shared experiences. They're looking for partners who can match their adventurous spirit and keep up with their active lifestyle.",
+        tinderTips: "Express your energy and spontaneity in your bio. Use active, exciting photos. Be engaging and playful in conversations. Look for profiles that suggest adventure and excitement. Don't be afraid to suggest spontaneous dates.",
+        compatibility: ["ISFJ", "ISTJ", "INFJ", "INTJ"]
+    },
+    ESFP: {
+        icon: "fas fa-theater-masks",
+        title: "The Entertainer",
+        description: "ESFPs are enthusiastic, friendly, and spontaneous individuals who love being the center of attention. They're warm, practical, and have a knack for entertaining others.",
+        traits: ["Enthusiastic", "Friendly", "Spontaneous", "Warm", "Practical", "Sociable"],
+        datingStyle: "ESFPs approach dating with enthusiasm and warmth. They value fun and shared experiences. They're looking for partners who can match their energy and share their love for life.",
+        tinderTips: "Express your enthusiasm and sociability in your bio. Use colorful, energetic photos. Be engaging and playful in conversations. Look for profiles that suggest fun and sociability. Don't be afraid to show your entertaining side.",
+        compatibility: ["ISFJ", "ISTJ", "INFJ", "INTJ"]
     }
 };
 
@@ -223,7 +295,7 @@ function showQuestion() {
     // Update progress bar
     updateProgressBar();
 
-    // Update navigation buttons
+        // Update navigation buttons
     prevBtn.disabled = currentQuestion === 0;
     nextBtn.disabled = true;
 }
@@ -258,7 +330,7 @@ function updateProgressBar() {
     progressFill.style.width = `${progress}%`;
 }
 
-          function showResults() {
+function showResults() {
     // Calculate personality type
     let type = '';
     
@@ -298,7 +370,7 @@ function updateProgressBar() {
     personalityDescription.textContent = personality.description;
     datingStyle.textContent = personality.datingStyle;
     tinderTips.textContent = personality.tinderTips;
-    
+
     // Update traits
     traitsList.innerHTML = '';
     personality.traits.forEach(trait => {
@@ -323,7 +395,7 @@ function updateProgressBar() {
     
     // Show result screen
     quizScreen.classList.remove('active');
-    resultScreen.classList.add('active');
+        resultScreen.classList.add('active');
 }
 
 function shareResults() {
@@ -367,8 +439,8 @@ Find your personality type at Mindzy!`;
         notification.style.zIndex = '1000';
         notification.textContent = 'Personality details copied to clipboard!';
         document.body.appendChild(notification);
-        
-        setTimeout(() => {
+
+    setTimeout(() => {
             notification.remove();
         }, 3000);
     }
@@ -379,4 +451,4 @@ function restartQuiz() {
     welcomeScreen.classList.add('active');
     currentQuestion = 0;
     answers = {};
-                     }                                      
+}
